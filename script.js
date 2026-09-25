@@ -78,13 +78,12 @@ renderSkills();
 
 const themeToggle = document.querySelector(".theme-toggle");
 
-// 1. При загрузке: проверь localStorage и поставь тему
+
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
     document.documentElement.classList.add("theme-dark");
 }
 
-// 2. При клике: переключай тему и сохраняй выбор
 themeToggle.addEventListener("click", () => {
     document.documentElement.classList.toggle("theme-dark");
     const isDark = document.documentElement.classList.contains("theme-dark");
