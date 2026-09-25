@@ -16,6 +16,9 @@
         <nav class = "header__nav">
             <p class = "header__logo"> DARKMILKA </p>
         <ul class = "header__list">
+            <button class="theme-toggle" type="button" aria-label="Переключить тему">
+                <span class="theme-toggle__icon">🌙</span>
+            </button>
             <li class = "header__list-item"> 
                 <a class = "header__list-link active" href = "/"> Главная </a> 
             </li>
@@ -23,13 +26,13 @@
                 <a class = "header__list-link" href = "#education"> Образование </a> 
             </li>
             <li class = "header__list-item">
-                <a class = "header__list-link" href = "/"> Навыки </a> 
+                <a class = "header__list-link" href = "#skills"> Навыки </a> 
             </li>
             <li class = "header__list-item">
-                <a class = "header__list-link" href = "/"> Опыт работы </a> 
+                <a class = "header__list-link" href = "#experience"> Опыт работы </a> 
             </li>
             <li class = "header__list-item">
-                <a class = "header__list-link" href = "/"> Мои проекты </a> 
+                <a class = "header__list-link" href = "#projects"> Мои проекты </a> 
             </li>
         </ul>
         </nav>
@@ -47,9 +50,6 @@
 
                     <div class="hero__buttons">
                         <a class="hero__button" href="/" > Больше </a>
-                        <a class = "hero__scroll" href = "/">
-                            <img class = "hero__scroll-image" src = "images/Down.svg"  width = "60" height="60" alt = "">
-                        </a>
                     </div>
 
                 </div>
@@ -75,25 +75,103 @@
             </div>
         </section>
         <section class="skills" id="skills">
-            
+            <div class="skills__container">
+                <h1 class="skills__title">Навыки</h1>
+
+                <div class="skills__controls">
+                    <div class="skills__filters">
+                        <button class="skills__filter-btn active" data-category="all">Все</button>
+                        <button class="skills__filter-btn" data-category="languages">Языки</button>
+                        <button class="skills__filter-btn" data-category="frontend">Frontend</button>
+                        <button class="skills__filter-btn" data-category="backend">Backend</button>
+                        <button class="skills__filter-btn" data-category="databases">Базы данных</button>
+                        <button class="skills__filter-btn" data-category="tools">Инструменты</button>
+                        <button class="skills__filter-btn" data-category="os">ОС</button>
+                    </div>
+
+                    <input
+                        type="text"
+                        class="skills__search"
+                        id="skills-search"
+                        placeholder="Поиск навыка..."
+                    >
+                </div>
+
+                <ul class="skills__list" id="skills-list"></ul>
+
+                <p class="skills__empty" id="skills-empty" hidden>Ничего не найдено.</p>
+            </div>
         </section>
-        <section class="companies">
-            <div class="companies__container">
-                <ul class="companies__list">
-                    <li class="companies__company">
-                        <a href="https://vk.com/id385870587">
-                            <img class = "companies__company-logo" src="images/logos/VK.svg" width = "50" height = "50" alt="">
-                        </a>
-                    </li>
-                    <li class="companies__company">
-                        <img class = "companies__company-logo" src="images/logos/TG.svg" width = "60" height = "60" alt="">
-                    </li>
-                    <li class="companies__company">
-                        <img class = "companies__company-logo" src="images/logos/max.svg"width = "40" height = "40"  alt="">
-                    </li>
-                </ul>
+        <section class="experience" id="experience">
+            <div class="experience__container">
+                <h2 class="experience__title">Опыт работы</h2>
+
+                <p class="experience__intro">
+                    Коммерческого опыта у меня пока немного — я работаю в школе программирования для детей, где учу ребят основам. Параллельно я делаю учебные проекты, которые помогают мне расти как разработчику. Ниже — некоторые из них.
+                </p>
+
+                <a class="experience__button" href="#projects">Посмотреть учебные проекты</a>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <div class="projects__container">
+                <h2 class="projects__title">Учебные проекты</h2>
+
+                <div class="projects__list">
+
+                    <article class="projects__item">
+                        <h3 class="projects__name">1. Сайт поликлиники</h3>
+                        <p class="projects__tech">HTML, CSS, JavaScript, MySQL</p>
+                        <p class="projects__item-desc">Разработала сайт поликлиники с системой записи к врачам, возможностью авторизации.</p>
+
+                        <div class="projects__gallery-grid">
+                            <img class="projects__screenshot" src="images/projects/project1-1.png" alt="Скрин 1">
+                            <img class="projects__screenshot" src="images/projects/project1-2.png" alt="Скрин 2">
+                            <img class="projects__screenshot" src="images/projects/project1-3.png" alt="Скрин 3">
+                            <img class="projects__screenshot" src="images/projects/project1-4.png" alt="Скрин 4">
+                        </div>
+                    </article>
+
+                    <article class="projects__item">
+                        <h3 class="projects__name">2. Сайт МГУ им. Н.П. Огарёва</h3>
+                        <p class="projects__tech">HTML, CSS, JavaScript</p>
+                        <p class="projects__item-desc">Учебный проект: сайт МГУ им. Н.П. Огарёва, сделанный по нашему представлению о том, каким должен быть современный сайт университета. Продумывала структуру, навигацию и дизайн.</p>
+
+                        <div class="projects__gallery-grid">
+                            <img class="projects__screenshot" src="images/projects/project2-1.png" alt="Скрин 1">
+                            <img class="projects__screenshot" src="images/projects/project2-2.png" alt="Скрин 2">
+                        </div>
+                    </article>
+
+                    <article class="projects__item">
+                        <h3 class="projects__name">3. Игра на C++ «Космолёт»</h3>
+                        <p class="projects__tech">C++</p>
+                        <p class="projects__item-desc">Учебная игра на C++ «Космолёт»: корабль отстреливается от летящих на него многоугольников, а разрушаются они за счёт триангуляции — фигуры разбиваются на треугольники и рассыпаются при попадании.</p>
+
+                        <div class="projects__gallery-grid">
+                            <img class="projects__screenshot" src="images/projects/project3-1.png" alt="Скрин 1">
+                            <img class="projects__screenshot" src="images/projects/project3-2.png" alt="Скрин 2">
+                            <img class="projects__screenshot" src="images/projects/project3-3.png" alt="Скрин 3">
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <section class="contacts" id="contacts">
+            <div class="contacts__container">
+                <h2 class="contacts__title">Контакты</h2>
+
+                <p class="contacts__text">
+                    Связаться со мной можно по электронной почте:
+                </p>
+
+                <a class="contacts__email" href="mailto:bulatovasamira2006@mail.ru">
+                    bulatovasamira2006@mail.ru
+                </a>
             </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
