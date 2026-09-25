@@ -5,7 +5,7 @@
 
 ## Ссылка на сайт
 
-🔗 [Открыть опубликованный сайт]([https://SamiraBulatova.github.io/My-interactive-resume/](https://samirabulatova.github.io/My-interactive-resume/))
+🔗 [Открыть опубликованный сайт](https://SamiraBulatova.github.io/My-interactive-resume/](https://samirabulatova.github.io/My-interactive-resume/)
 
 ## Что реализовано
 
